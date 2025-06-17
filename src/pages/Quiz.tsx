@@ -127,9 +127,6 @@ const Quiz = () => {
               <Badge variant="outline" className="text-lg px-4 py-2">
                 Question {currentQuestion + 1} of {questions.length}
               </Badge>
-              <Badge className="text-lg px-4 py-2 bg-gradient-to-r from-green-500 to-teal-500">
-                Score: {score}
-              </Badge>
             </div>
             <Progress value={progress} className="h-3 mb-4" />
             <CardTitle className="text-2xl font-bold text-gray-800 leading-relaxed">
