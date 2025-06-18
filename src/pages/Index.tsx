@@ -7,14 +7,24 @@ const Index = () => {
   const navigate = useNavigate();
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-purple-600 via-blue-600 to-teal-500">
+    <div className="min-h-screen bg-cover bg-center bg-no-repeat" style={{ backgroundImage: "url('https://t4.ftcdn.net/jpg/03/45/88/07/360_F_345880772_zIT2mkdCzTthplO7xqaGGrMspN0jw0ll.jpg')" }}>
       <div className="container mx-auto px-4 py-16">
         <div className="text-center mb-12">
-          <h1 className="text-6xl font-bold text-white mb-6 tracking-tight">
-            CodeQuiz
-          </h1>
+          <div className="flex justify-between items-center mt-[5%]">
+            <div className="flex-1 flex justify-center">
+              <h1 className="text-6xl font-bold mb-6 tracking-tight bg-gradient-to-r from-yellow-300 via-pink-500 to-purple-600 text-transparent bg-clip-text drop-shadow-[0_0_10px_rgba(255,255,255,0.5)]">
+                CodeQuiz
+              </h1>
+            </div>
+            <div>
+              <button className="text-white mb-6 tracking-tight border rounded-lg p-2" onClick={() => navigate("/about-us")}>
+                About Us
+              </button>
+            </div>
+          </div>
+
           <p className="text-xl text-purple-100 max-w-2xl mx-auto leading-relaxed">
-            Test your programming knowledge with our interactive quiz platform. 
+            Test your programming knowledge with our interactive quiz platform.
             Challenge yourself with 10 carefully crafted questions and track your progress.
           </p>
         </div>
@@ -23,13 +33,13 @@ const Index = () => {
           <Card className="backdrop-blur-sm bg-white/10 border-white/20 shadow-2xl">
             <CardContent className="p-8">
               <div className="space-y-4">
-                <Button 
+                <Button
                   onClick={() => navigate('/signin')}
                   className="w-full h-12 bg-white/30 text-purple-600 bg-white hover:bg-white/10 hover:text-black font-semibold text-lg shadow-lg hover:shadow-xl transition-all duration-300"
                 >
                   Sign In
                 </Button>
-                <Button 
+                <Button
                   onClick={() => navigate('/signup')}
                   variant="outline"
                   className="w-full h-12 border-white/30 text-purple-600 hover:bg-white/10 font-semibold text-lg backdrop-blur-sm"
